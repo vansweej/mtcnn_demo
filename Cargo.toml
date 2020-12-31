@@ -1,0 +1,21 @@
+[package]
+name = "mtcnn_demo"
+version = "0.1.0"
+authors = ["Jan Van Sweevelt <vansweej@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+lto = true
+
+[dependencies]
+image = "0.23.12"
+imageproc = "0.22"
+mtcnn-rs = { git = "https://github.com/vansweej/mtcnn-rs.git", branch = "main" }
+tensorrt-rs = { git = "https://github.com/vansweej/tensorrt-rs", branch = "develop" }
+
+
+[dependencies.show-image]
+version = "0.6.5"
+features = ["image"]
